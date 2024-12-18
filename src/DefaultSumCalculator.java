@@ -1,5 +1,6 @@
-import java.util.List;
+
 import java.util.ArrayList;
+import java.util.List;
 
 public class DefaultSumCalculator implements SumCalculator {
 
@@ -11,7 +12,7 @@ public class DefaultSumCalculator implements SumCalculator {
             int num = Integer.parseInt(token);
             if (num < 0) {
                 negatives.add(num);
-            } else {
+            } else if (num <= 1000) {
                 sum += num;
             }
         }
